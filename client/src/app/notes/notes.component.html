@@ -1,0 +1,12 @@
+<h2>Notes</h2>
+<h3>Add a new note:</h3>
+<form (submit)="onSubmit()">
+	<p>Title: <input type="text" name="title" [(ngModel)]="newNote.title" #title="ngModel"></p>
+	<p>Content: <input type="text" name="content" [(ngModel)]="newNote.content" #content="ngModel"></p>
+	<input type="submit" name="">
+</form>
+
+<fieldset *ngFor="let note of notes">
+	<h2>{{note.title}}</h2>
+	<p>{{note.content}}</p>
+</fieldset>
